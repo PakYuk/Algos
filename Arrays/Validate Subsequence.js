@@ -9,3 +9,20 @@
   Output: 
     true
 */
+
+/*
+Appraoch: loop through array, check sequence value against array values, if there's a match, move to the next value in sequence, check the last element in sequence see if there's a match in the array, if yes return true; if not return false;
+*/
+
+function isValidate(array, sequence) {
+	//marker for sequence position
+	let subIdx = 0;
+	//loop through array
+	for (let i = 0; i < array.length; i++) {
+		//if there's a match move to next value in sequence
+		if (array[i] === sequence[subIdx]) {
+			subIdx++;
+		}
+		return (subIdx = sequence.length);
+	}
+}
