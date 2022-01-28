@@ -13,16 +13,14 @@ function solution(inputString) {
 //solution 2
 function isPalindrome(string) {
 	// Write your code here.
-	for (let i = 0; i < string.length; i++) {
-		let left = 0;
-		let right = string.length - 1;
-		while (left < right) {
-			if (string[left] === string[right]) {
-				left++;
-				right--;
-			} else {
-				return false;
-			}
+	let left = 0;
+	let right = string.length - 1;
+	while (left < right) {
+		if (string[left] === string[right]) {
+			left++;
+			right--;
+		} else {
+			return false;
 		}
 	}
 	return true;
