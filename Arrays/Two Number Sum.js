@@ -20,3 +20,16 @@ function twoNumberSum(array, targetSum) {
 	}
 	return result;
 }
+
+//Solution 2 hashmap
+const twoSum = function (nums, target) {
+	const pairs = {}; //create hashmap to store all visited numbers
+	for (let i = 0; i < nums.length; i++) {
+		let potentialMatch = target - nums[i];
+		if (potentialMatch in pairs) {
+			return [pairs[potentialMatch], i];
+		} else {
+			pairs[nums[i]] = i;
+		}
+	}
+};
