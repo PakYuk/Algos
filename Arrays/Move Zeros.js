@@ -29,3 +29,18 @@ var moveZeroes = function (nums) {
 		}
 	}
 };
+//two pointer
+var moveZeroes = function (nums) {
+	let i = 0;
+	let j = 0;
+
+	while (i < nums.length) {
+		if (nums[i] != 0) {
+			let temp = nums[i];
+			nums[i] = 0;
+			nums[j] = temp;
+			j++;
+		}
+		i++;
+	}
+};
