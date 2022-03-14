@@ -33,3 +33,24 @@ const twoSum = function (nums, target) {
 		}
 	}
 };
+
+//two pointer
+const twoSum = (nums, target) => {
+	const num = nums.sort((a, b) => a - b);
+	let left = 0;
+	let right = num.length - 1;
+	let currentSum = num[left] + num[right];
+
+	while (left < right) {
+		if (currentSum < target) {
+			left++;
+		}
+		if (currentSum > target) {
+			right--;
+		} else {
+			return [left, right];
+		}
+	}
+
+	return -1;
+};
